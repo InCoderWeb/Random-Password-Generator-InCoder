@@ -1,0 +1,59 @@
+<!-- ---------------- Created By InCoder ---------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator - InCoder</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="generatorBox">
+            <h1 class="title">Password Generator</h1>
+            <input type="text" id="passwordDisplay" placeholder="Password">
+            <form id="generatorOptions">
+                <div class="options">
+                    <div class="characterRange">
+                        <p>Characters Length <span>16</span></p>
+                        <input type="range" id="characterRange">
+                    </div>
+                    <p>Options</p>
+                    <div class="includeUppercase">
+                        <p>Include Uppercase</p>
+                        <label class="checkbox">
+                            <input type="checkbox" id="includeUppercase">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="includeLowercase">
+                        <p>Include Lowercase</p>
+                        <label class="checkbox">
+                            <input type="checkbox" id="includeLowercase">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="includeNumbers">
+                        <p>Include Numbers</p>
+                        <label class="checkbox">
+                            <input type="checkbox" id="includeLowercase">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="includeSymbols">
+                        <p>Include Symbols</p>
+                        <label class="checkbox">
+                            <input type="checkbox" id="includeLowercase">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <button type="submit">Generate Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
