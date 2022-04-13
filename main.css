@@ -19,30 +19,29 @@ body {
   display: flex;
   height: 100vh;
   align-items: center;
-  background: #22cf94;
+  background: #060923e3;
   justify-content: center;
 }
 
 .container .generatorBox {
   display: flex;
-  margin: 1rem 1rem;
   align-items: center;
   border-radius: 0.8rem;
   flex-direction: column;
   justify-content: center;
-  width: clamp(19rem, 22vw, 20rem);
+  width: clamp(20rem, 22vw, 20rem);
+  box-shadow: 0 0 20px #33295f8a;
   transition: box-shadow 0.3s ease-in-out;
   background-image: linear-gradient(250deg, #1e1642 30%, #211558 80%);
 }
 
 .container .generatorBox:hover {
-  box-shadow: 0 0 20px #44444430;
 }
 
 .container .generatorBox .title {
   color: #fff;
   text-align: center;
-  padding-top: 0.3rem;
+  padding-top: 0.6rem;
   font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
@@ -78,8 +77,8 @@ body {
 }
 
 #generatorOptions {
-  color: #fff;
-  width: calc(100% - 1.5rem);
+    color: #fff;
+    width: calc(100% - 1.5rem);
 }
 
 #generatorOptions .form-group {
@@ -93,7 +92,7 @@ body {
   align-items: center;
   margin-bottom: 0.5rem;
   background: #33295f;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: var(--border-radius);
 }
 
@@ -102,9 +101,13 @@ body {
   margin-top: 0.6rem;
 }
 
+#generatorOptions .characterRange .form-group{
+    justify-content: center!important;
+}
+
 #generatorOptions .options > p {
-  font-size: 0.8rem;
-  margin-bottom: 0.1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
 }
 
 #copyToClipboardBtn {
@@ -128,7 +131,7 @@ body {
 }
 
 #passwordDisplay.copyBtnShow #copyToClipboardBtn {
-  transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 #characterRange {
@@ -144,11 +147,11 @@ body {
 }
 
 #characterRange:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 #characterRange::-webkit-slider-thumb {
-  width: 20px;
+    width: 20px;
   height: 20px;
   cursor: pointer;
   appearance: none;
@@ -167,10 +170,75 @@ body {
 
 #characterRange::before{
     content: '1';
-    left: 0;
-    top: 50%;
+    left: -14px;
     width: auto;
     height: auto;
+    bottom: -8px;
     color: #fff;
+    font-size: .7rem;
     position: absolute;
+}
+
+#characterRange::after{
+    content: '100';
+    right: -23px;
+    width: auto;
+    height: auto;
+    bottom: -8px;
+    color: #fff;
+    font-size: .7rem;
+    position: absolute;
+}
+
+#generatorOptions .form-group input[type=checkbox]{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#generatorOptions .checkbox{
+    width: 2.6rem;
+    display: flex;
+    height: 1.5rem;
+    padding: 0 4px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border-radius: 50rem;
+    transition: background-color .3s cubic-bezier(0.55,-0.34, 0.16, 1.95);
+    background-color: rgba(214, 214, 214, 0.434);
+}
+
+#generatorOptions .checkbox::before{
+    content: '';
+    left: 4px;
+    width: 45%;
+    height: 75%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    transition:  left .3s cubic-bezier(0.55,-0.34, 0.16, 1.95);
+}
+
+#generatorOptions .form-group input[type=checkbox]:checked + .checkbox{
+    background-color: #5d68e2;
+}
+
+#generatorOptions .form-group input[type=checkbox]:checked + .checkbox::before{
+    left: 18px;
+}
+
+#generatorOptions button[type=submit]{
+    border: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    height: 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+    justify-content: center;
+    background: linear-gradient(45deg, #7c3aed 30%, #db2777);
 }

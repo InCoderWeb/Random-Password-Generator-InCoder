@@ -1,4 +1,6 @@
 // ---------------- Created By InCoder ----------------
+
+// ---------------- Copy Button Animation ----------------
 let passwordDisplay = document.querySelector('#passwordDisplay')
 let copyToClipboardBtn = document.querySelector('#copyToClipboardBtn')
 
@@ -23,3 +25,8 @@ passwordDisplay.addEventListener('mouseleave', (e) => {
     }, 300)
     passwordDisplay.classList.remove('copyBtnShow')
 })
+// ---------------- Copy Button Animation End ----------------
+
+// ---------------- Character value changer ----------------
+
+// ---------------- Character value changer End ----------------
