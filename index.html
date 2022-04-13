@@ -7,53 +7,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generator - InCoder</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="generatorBox">
             <h1 class="title">Password Generator</h1>
-            <input type="text" id="passwordDisplay" placeholder="Password">
+            <div id="passwordDisplay">Password <span id="copyToClipboardBtn"><i class="fa-solid fa-clipboard"></i></span> </div>
             <form id="generatorOptions">
                 <div class="options">
                     <div class="characterRange">
-                        <p>Characters Length <span>16</span></p>
-                        <input type="range" id="characterRange">
+                        <p>Characters Length: <span>16</span></p>
+                        <div class="form-group">
+                            <input type="range" id="characterRange">
+                        </div>
                     </div>
                     <p>Options</p>
                     <div class="includeUppercase">
-                        <p>Include Uppercase</p>
-                        <label class="checkbox">
-                            <input type="checkbox" id="includeUppercase">
-                            <span class="slider"></span>
-                        </label>
+                        <div class="form-group">
+                            <p>Include Uppercase</p>
+                            <label class="checkbox">
+                                <input type="checkbox" id="includeUppercase">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="includeLowercase">
-                        <p>Include Lowercase</p>
-                        <label class="checkbox">
-                            <input type="checkbox" id="includeLowercase">
-                            <span class="slider"></span>
-                        </label>
+                        <div class="form-group">
+                            <p>Include Lowercase</p>
+                            <label class="checkbox">
+                                <input type="checkbox" id="includeLowercase">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="includeNumbers">
-                        <p>Include Numbers</p>
-                        <label class="checkbox">
-                            <input type="checkbox" id="includeLowercase">
-                            <span class="slider"></span>
-                        </label>
+                        <div class="form-group">
+                            <p>Include Numbers</p>
+                            <label class="checkbox">
+                                <input type="checkbox" id="includeLowercase">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="includeSymbols">
-                        <p>Include Symbols</p>
-                        <label class="checkbox">
-                            <input type="checkbox" id="includeLowercase">
-                            <span class="slider"></span>
-                        </label>
+                        <div class="form-group">
+                            <p>Include Symbols</p>
+                            <label class="checkbox">
+                                <input type="checkbox" id="includeLowercase">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
                     <button type="submit">Generate Password</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

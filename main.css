@@ -1,7 +1,176 @@
 /* ---------------- Created By InCoder ---------------- */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --X: 0;
+  --Y: 0;
+  --border-radius: 0.5rem;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background: #22cf94;
+  justify-content: center;
+}
+
+.container .generatorBox {
+  display: flex;
+  margin: 1rem 1rem;
+  align-items: center;
+  border-radius: 0.8rem;
+  flex-direction: column;
+  justify-content: center;
+  width: clamp(19rem, 22vw, 20rem);
+  transition: box-shadow 0.3s ease-in-out;
+  background-image: linear-gradient(250deg, #1e1642 30%, #211558 80%);
+}
+
+.container .generatorBox:hover {
+  box-shadow: 0 0 20px #44444430;
+}
+
+.container .generatorBox .title {
+  color: #fff;
+  text-align: center;
+  padding-top: 0.3rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+}
+
+#passwordDisplay {
+  border: 0;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  height: 3.2rem;
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+  margin-top: 0.6rem;
+  position: relative;
+  align-items: center;
+  background: #33295f;
+  justify-content: center;
+  max-width: calc(100% - 1.5rem);
+  border-radius: var(--border-radius);
+}
+
+#passwordDisplay:focus {
+  outline: none;
+  pointer-events: none;
+}
+
+#passwordDisplay::placeholder {
+  color: #ccc;
+}
+
+#passwordDisplay:focus::placeholder {
+  color: #fff;
+}
+
+#generatorOptions {
+  color: #fff;
+  width: calc(100% - 1.5rem);
+}
+
+#generatorOptions .form-group {
+  border: 0;
+  height: 3rem;
+  color: #fff;
+  display: flex;
+  max-width: 100%;
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background: #33295f;
+  justify-content: center;
+  border-radius: var(--border-radius);
+}
+
+#generatorOptions .characterRange {
+  font-size: 0.7rem;
+  margin-top: 0.6rem;
+}
+
+#generatorOptions .options > p {
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+#copyToClipboardBtn {
+  opacity: 0;
+  top: var(--Y);
+  width: 2.6rem;
+  display: flex;
+  height: 2.6rem;
+  left: var(--X);
+  cursor: pointer;
+  color: #1e1642;
+  font-size: 1.2rem;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  pointer-events: none;
+  transform: scale(0.2);
+  justify-content: center;
+  background-color: #fff;
+  transition: transform 0.6s cubic-bezier(0.24, -0.08, 0.24, 1.81);
+}
+
+#passwordDisplay.copyBtnShow #copyToClipboardBtn {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#characterRange {
+  width: 90%;
+  height: 2px;
+  opacity: 0.7;
+  outline: none;
+  position: relative;
+  background: #d3d3d3a1;
+  -webkit-transition: 0.2s;
+  -webkit-appearance: none;
+  transition: opacity 0.2s;
+}
+
+#characterRange:hover {
+  opacity: 1;
+}
+
+#characterRange::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  background: #5d68e2;
+  -webkit-appearance: none;
+}
+
+#characterRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #5d68e2;
+}
+
+#characterRange::before{
+    content: '1';
+    left: 0;
+    top: 50%;
+    width: auto;
+    height: auto;
+    color: #fff;
+    position: absolute;
 }
