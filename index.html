@@ -13,15 +13,19 @@
 
 <body>
     <div class="container">
+        <div class="coppiedMessage">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Password Copied</p>
+        </div>
         <div class="generatorBox">
             <h1 class="title">Password Generator</h1>
-            <div id="passwordDisplay">Password <span id="copyToClipboardBtn"><i class="fa-solid fa-clipboard"></i></span> </div>
+            <div id="passwordDisplay"><p>Password</p> <span id="copyToClipboardBtn"><i class="fa-solid fa-copy"></i></span></div>
             <form id="generatorOptions">
                 <div class="options">
                     <div class="characterRange">
-                        <p>Characters: <span>16</span></p>
+                        <p>Characters: <span class="characterSpan">16</span></p>
                         <div class="form-group">
-                            <input type="range" id="characterRange" value="15">
+                            <input type="range" id="characterRange" value="16" min="4">
                         </div>
                     </div>
                     <p>Options</p>
@@ -30,15 +34,6 @@
                             <p>Include Uppercase</p>
                             <input type="checkbox" id="includeUppercase">
                             <label class="checkbox" for="includeUppercase">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="includeLowercase">
-                        <div class="form-group">
-                            <p>Include Lowercase</p>
-                            <input type="checkbox" id="includeLowercase">
-                            <label class="checkbox" for="includeLowercase">
                                 <span class="slider"></span>
                             </label>
                         </div>
