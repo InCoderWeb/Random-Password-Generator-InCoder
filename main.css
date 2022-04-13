@@ -266,7 +266,7 @@ body {
   background: #33295f;
   justify-content: center;
   transform: translate(-50%, 25px);
-  transition: transform .3s cubic-bezier(0.55, -0.34, 0.16, 1.95);
+  transition: transform .3s cubic-bezier(0.18,-0.02, 0.3, 1.6);
 }
 
 .coppiedMessage.success{
